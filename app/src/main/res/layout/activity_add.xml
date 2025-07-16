@@ -1,0 +1,103 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/addupdatebackground"
+    tools:context=".AddActivity">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/backbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/saveButton"
+        android:layout_width="285dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="748dp"
+        android:background="@drawable/savebtnxml"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/uploadBookName"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/pink_border"
+        android:hint="Enter book name"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:padding="12dp"
+        android:textColor="@color/pink"
+        android:textColorHint="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/uploadBookGenre"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="492dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/pink_border"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:hint="Enter book genre"
+        android:textColorHint="@color/pink"
+        android:padding="12dp"
+        android:textColor="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/uploadBookPublisher"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="568dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/pink_border"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:hint="Enter book publisher"
+        android:textColorHint="@color/pink"
+        android:padding="12dp"
+        android:textColor="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/uploadBookNumber"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="644dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/pink_border"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:hint="Enter book number"
+        android:textColorHint="@color/pink"
+        android:padding="12dp"
+        android:textColor="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton2"-->
+<!--        android:layout_width="229dp"-->
+<!--        android:layout_height="55px"-->
+<!--        android:layout_marginTop="624dp"-->
+<!--        android:background="@drawable/boxxml"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.104"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

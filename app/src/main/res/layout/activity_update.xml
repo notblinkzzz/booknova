@@ -1,0 +1,103 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/addupdatebackground"
+    tools:context=".UpdateActivity">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/backbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/updateButton"
+        android:layout_width="285dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="748dp"
+        android:background="@drawable/upbtnxml"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/referenceBookNumber"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:background="@drawable/pink_border"
+        android:hint="Enter book number"
+        android:textColorHint="@color/pink"
+        android:padding="12dp"
+        android:textColor="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/updateBookName"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="492dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:background="@drawable/pink_border"
+        android:hint="Enter book name"
+        android:textColorHint="@color/pink"
+        android:padding="12dp"
+        android:textColor="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/updateBookGenre"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="644dp"
+        android:layout_marginEnd="12dp"
+        android:textColorHint="@color/pink"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:background="@drawable/pink_border"
+        android:hint="Enter book genre"
+        android:padding="12dp"
+        android:textColor="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/updateBookPublisher"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="564dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:background="@drawable/pink_border"
+        android:hint="Enter book publisher"
+        android:padding="12dp"
+        android:textColorHint="@color/pink"
+        android:textColor="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/imageButton2"-->
+    <!--        android:layout_width="229dp"-->
+    <!--        android:layout_height="55px"-->
+    <!--        android:layout_marginTop="624dp"-->
+    <!--        android:background="@drawable/boxxml"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.104"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

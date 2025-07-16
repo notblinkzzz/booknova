@@ -1,0 +1,50 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/item_book_bg"> <!-- ✅ Only here -->
+
+    <TextView
+        android:id="@+id/bookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: test"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/bookGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre: test"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/bookPublisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publisher: test"
+        android:textSize="16sp"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:textColor="@color/white"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/bookNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number: 1"
+        android:fontFamily="@font/satoshi_bold_italic"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textAlignment="center"/>
+</LinearLayout>

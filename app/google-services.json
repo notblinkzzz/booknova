@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "605195052931",
+    "firebase_url": "https://kotlin-finals-default-rtdb.firebaseio.com",
+    "project_id": "kotlin-finals",
+    "storage_bucket": "kotlin-finals.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605195052931:android:12a5f28c2d00865fc478b6",
+        "android_client_info": {
+          "package_name": "com.example.kotlinfinals"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmEBrq9aKY1bWKnPMjpjcSzhBVJ5wKxMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605195052931:android:cc7f024ff8b3c4a0c478b6",
+        "android_client_info": {
+          "package_name": "com.example.test_finals"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmEBrq9aKY1bWKnPMjpjcSzhBVJ5wKxMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
