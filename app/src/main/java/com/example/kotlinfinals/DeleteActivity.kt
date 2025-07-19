@@ -8,6 +8,8 @@ import com.example.kotlinfinals.databinding.ActivityDeleteBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
+// this activity handles deleting book data from firebase
+
 class DeleteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDeleteBinding
@@ -18,21 +20,24 @@ class DeleteActivity : AppCompatActivity() {
         binding = ActivityDeleteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // navigate back to main activity
         binding.backButton.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 
+        // when delete button is clicked
         binding.deleteButton.setOnClickListener {
             val bookNumber = binding.deleteBookNumber.text.toString()
             if (bookNumber.isNotEmpty()) {
                 deleteData(bookNumber)
             } else {
-                Toast.makeText(this, "Please enter book number", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "please enter book number", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
+    // function to delete data from firebase
     private fun deleteData(bookNumber: String) {
         databaseReference = FirebaseDatabase.getInstance().getReference("Book Information")
 
@@ -40,15 +45,15 @@ class DeleteActivity : AppCompatActivity() {
             if (snapshot.exists()) {
                 databaseReference.child(bookNumber).removeValue().addOnSuccessListener {
                     binding.deleteBookNumber.text.clear()
-                    Toast.makeText(this, "Deleted successfully", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "deleted successfully", Toast.LENGTH_SHORT).show()
                 }.addOnFailureListener {
-                    Toast.makeText(this, "Unable to delete", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "unable to delete", Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(this, "Book number does not exist", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "book number does not exist", Toast.LENGTH_SHORT).show()
             }
         }.addOnFailureListener {
-            Toast.makeText(this, "Error checking book number", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "error checking book number", Toast.LENGTH_SHORT).show()
         }
     }
 }

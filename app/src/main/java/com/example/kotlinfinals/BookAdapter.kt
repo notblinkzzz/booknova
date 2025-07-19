@@ -6,6 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+
+// this adapter populates book data inside the recycler view
+
 class BookAdapter(private var bookList: List<BookData>) :
     RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
 
@@ -17,8 +20,7 @@ class BookAdapter(private var bookList: List<BookData>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_book, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_book, parent, false)
         return BookViewHolder(view)
     }
 

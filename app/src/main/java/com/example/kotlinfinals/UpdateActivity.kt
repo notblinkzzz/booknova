@@ -8,6 +8,8 @@ import com.example.kotlinfinals.databinding.ActivityUpdateBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
+// this activity handles updating book data in firebase
+
 class UpdateActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUpdateBinding
@@ -18,11 +20,13 @@ class UpdateActivity : AppCompatActivity() {
         binding = ActivityUpdateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // navigate back to main
         binding.backButton.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 
+        // when update button is clicked
         binding.updateButton.setOnClickListener {
             val bookNumber = binding.referenceBookNumber.text.toString()
             val bookName = binding.updateBookName.text.toString()
@@ -33,6 +37,7 @@ class UpdateActivity : AppCompatActivity() {
         }
     }
 
+    // function to update data in firebase
     private fun updateData(bookNumber: String, bookName: String, bookGenre: String, bookPublisher: String) {
         databaseReference = FirebaseDatabase.getInstance().getReference("Book Information")
 
@@ -42,7 +47,7 @@ class UpdateActivity : AppCompatActivity() {
         if (bookPublisher.isNotBlank()) bookData["bookPublisher"] = bookPublisher
 
         if (bookData.isEmpty()) {
-            Toast.makeText(this, "Please enter at least one field to update", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "please enter at least one field to update", Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -53,15 +58,15 @@ class UpdateActivity : AppCompatActivity() {
                     binding.updateBookName.text.clear()
                     binding.updateBookGenre.text.clear()
                     binding.updateBookPublisher.text.clear()
-                    Toast.makeText(this, "Updated", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "updated", Toast.LENGTH_SHORT).show()
                 }.addOnFailureListener {
-                    Toast.makeText(this, "Failed to update", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "failed to update", Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(this, "Book number does not exist", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "book number does not exist", Toast.LENGTH_SHORT).show()
             }
         }.addOnFailureListener {
-            Toast.makeText(this, "Error checking data", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "error checking data", Toast.LENGTH_SHORT).show()
         }
     }
 }

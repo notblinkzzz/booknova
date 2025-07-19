@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlinfinals.databinding.ActivityViewBooksBinding
 import com.google.firebase.database.*
 
+// this activity displays all books and handles search functionality
+
 class ViewBooksActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityViewBooksBinding
@@ -21,29 +23,33 @@ class ViewBooksActivity : AppCompatActivity() {
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Book Information")
 
+        // initialize recyclerview
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         bookAdapter = BookAdapter(bookList)
         binding.recyclerView.adapter = bookAdapter
 
-
+        // back to main
         binding.backButton.setOnClickListener {
             finish()
         }
 
+        // search for a book using its number
         binding.searchButton.setOnClickListener {
             val bookNumber = binding.searchEditText.text.toString()
             if (bookNumber.isNotEmpty()) {
                 searchBook(bookNumber)
             } else {
-                Toast.makeText(this, "Enter a book number", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "enter a book number", Toast.LENGTH_SHORT).show()
             }
         }
 
+        // view all books in the database
         binding.viewAllButton.setOnClickListener {
             loadBooks()
         }
     }
 
+    // function to load all books from firebase
     private fun loadBooks() {
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -56,22 +62,23 @@ class ViewBooksActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@ViewBooksActivity, "Failed to load", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ViewBooksActivity, "failed to load", Toast.LENGTH_SHORT).show()
             }
         })
     }
 
+    // function to search a book by its number
     private fun searchBook(bookNumber: String) {
         databaseReference.child(bookNumber).get().addOnSuccessListener { snapshot ->
             if (snapshot.exists()) {
                 val book = snapshot.getValue(BookData::class.java)
                 book?.let { bookAdapter.updateList(listOf(it)) }
             } else {
-                Toast.makeText(this, "Book not found", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "book not found", Toast.LENGTH_SHORT).show()
                 bookAdapter.updateList(emptyList())
             }
         }.addOnFailureListener {
-            Toast.makeText(this, "Error occurred", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "error occurred", Toast.LENGTH_SHORT).show()
         }
     }
 }
